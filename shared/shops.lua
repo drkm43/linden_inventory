@@ -1,20 +1,44 @@
 Config.General = {
-	name = 'Shop',
+	name = '24/7',
 	blip = {
 		id = 52,
 		colour = 69,
 		scale = 0.6
 	}, inventory = {
 		{ name = 'burger', price = 10 },
-		{ name = 'sandwich', price = 10 },
-		{ name = 'water', price = 10 },
+		{ name = 'water', price = 5 },
 		{ name = 'cola', price = 10 },
-		{ name = 'bandage', price = 10 },
 	}
 }
 
-Config.Liquor = {
-	name = 'Liquor Store',
+Config.Burguer = {
+	name = 'Burguer Shot',
+	blip = {
+		id = 52,
+		colour = 69,
+		scale = 0.6
+	}, inventory = {
+		{ name = 'burger', price = 10 },
+		{ name = 'water', price = 5 },
+		{ name = 'cola', price = 10 },
+	}
+}
+
+Config.Chicken = {
+	name = 'Clukin\' Bell',
+	blip = {
+		id = 52,
+		colour = 69,
+		scale = 0.6
+	}, inventory = {
+		{ name = 'burger', price = 10 },
+		{ name = 'water', price = 5 },
+		{ name = 'cola', price = 10 },
+	}
+}
+
+Config.Bar = {
+	name = 'Bar',
 	blip = {
 		id = 93,
 		colour = 69,
@@ -25,8 +49,20 @@ Config.Liquor = {
 	}
 }
 
-Config.YouTool = {
-	name = 'YouTool',
+Config.Club = {
+	name = 'Club',
+	blip = {
+		id = 93,
+		colour = 69,
+		scale = 0.6
+	}, inventory = {
+		{ name = 'water', price = 10 },
+		{ name = 'cola', price = 10 },
+	}
+}
+
+Config.Herramientas = {
+	name = 'Tienda de Herramientas',
 	blip = {
 		id = 402,
 		colour = 69,
@@ -36,13 +72,20 @@ Config.YouTool = {
 	}
 }
 
-Config.Ammunation = {
-	name = 'Ammunation',
+Config.Tecnologia = {
+	name = 'Tienda de Tecnología',
 	blip = {
-		id = 110,
+		id = 606,
 		colour = 69,
 		scale = 0.6
 	}, inventory = {
+		{ name = 'phone', price = 300 },
+	}
+}
+
+Config.Armas = {
+	name = 'Tienda de Armas',
+    inventory = {
 		{ name = 'ammo-9', price = 5, },
 		{ name = 'WEAPON_KNIFE', price = 200 },
 		{ name = 'WEAPON_BAT', price = 100 },
@@ -50,8 +93,8 @@ Config.Ammunation = {
 	}
 }
 
-Config.PoliceArmoury = {
-	name = 'Police Armoury',
+Config.Comisaria = {
+	name = 'Armería',
 	blip = {
 		id = 110,
 		colour = 84,
@@ -61,26 +104,27 @@ Config.PoliceArmoury = {
 		{ name = 'ammo-rifle', price = 5, },
 		{ name = 'WEAPON_FLASHLIGHT', price = 200 },
 		{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-		{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-		{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-		{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} },
+		{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'LCPD0T13523361' }, license = 'weapon' },
+		{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'LCPD0T23523366' }, license = 'weapon', grade = 3 },
+		{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'LCPD0T33523364'} },
 	}
 }
 
-Config.Medicine = {
-	name = 'Medicine Cabinet',
+Config.Hospital = {
+	name = 'Instrumental & Defensa Personal',
 	blip = {
 		id = 403,
 		colour = 69,
 		scale = 0.6
 	}, inventory = {
-		{ name = 'medikit', price = 26 },
-		{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'EMS' } },
+		{ name = 'medikit', price = 0 },
+		{ name = 'bandage', price = 0 },
+		{ name = 'WEAPON_STUNGUN', price = 0, metadata = { registered = true, serial = '7COLP0LC352331' } },
 	}
 }
 
-Config.BlackMarketArms = {
-	name = 'Black Market (Arms)',
+Config.MercadoNegro = {
+	name = 'Mercado Negro',
 	inventory = {
 		{
 			name = 'WEAPON_DAGGER',
@@ -101,7 +145,7 @@ Config.BlackMarketArms = {
 			price = 50000,
 		},
 		{
-			name = 'ammo-rifle',
+			name = 'ammo-9',
 			price = 1000
 		},
 		{
@@ -113,47 +157,43 @@ Config.BlackMarketArms = {
 
 
 Config.Shops = {
-	{ type = Config.Ammunation, coords = vector3(-662.180, -934.961, 21.829)--[[, currency = 'money']] }, -- can set currency like so
-	{ type = Config.Ammunation, coords = vector3(810.25, -2157.60, 29.62)--[[, currency = 'burger']] },
-	{ type = Config.Ammunation, coords = vector3(1693.44, 3760.16, 34.71) },
-	{ type = Config.Ammunation, coords = vector3(-330.24, 6083.88, 31.45) },
-	{ type = Config.Ammunation, coords = vector3(252.63, -50.00, 69.94) },
-	{ type = Config.Ammunation, coords = vector3(22.56, -1109.89, 29.80) },
-	{ type = Config.Ammunation, coords = vector3(2567.69, 294.38, 108.73) },
-	{ type = Config.Ammunation, coords = vector3(-1117.58, 2698.61, 18.55) },
-	{ type = Config.Ammunation, coords = vector3(842.44, -1033.42, 28.19) },
+	-- MERCADO NEGRO
+	    { type = Config.MercadoNegro, coords = vector3(309.09, -913.75, 56.46), currency = 'black_money' },
+	-- 24/7
+		{ type = Config.General, coords = vector3(-267.3, 1078.68, 15.13),                          name = '24/7', currency = 'money'},
+	-- BURGUER SHOT
+		{ type = Config.Burguer, coords = vector3(-939.1, 2465.24, 24.31),                           name = 'Burger Shot', currency = 'money'},
+		{ type = Config.Burguer, coords = vector3(-361.25, 2035.05,  13.05),                         name = 'Burger Shot', currency = 'money'},
+		{ type = Config.Burguer, coords = vector3(-549.02, 974.49, 4.81),                            name = 'Burger Shot', currency = 'money'},
+		{ type = Config.Burguer, coords = vector3(-105.26, 1127.69,  14.82),                         name = 'Burger Shot', currency = 'money'},
+		{ type = Config.Burguer, coords = vector3(1709.01, 1065.43,  25.21),                         name = 'Burger Shot', currency = 'money'},
+		{ type = Config.Burguer, coords = vector3(517.83, 2345.73, 16.32),                           name = 'Burger Shot', currency = 'money'},
+		{ type = Config.Burguer, coords = vector3(1178.16, 2426.96, 16.91),                          name = 'Burger Shot', currency = 'money'},
+	-- CLUCKIN'BELL
+		{ type = Config.Chicken, coords = vector3(-55.75, 909.85, 14.8),                             name = 'Clukin\' Bell', currency = 'money'},
+		{ type = Config.Chicken, coords = vector3(1253.49, 1202.11, 25.1),                           name = 'Clukin\' Bell', currency = 'money'},
+		{ type = Config.Chicken, coords = vector3(1253.49, 1202.11, 25.1),                           name = 'Clukin\' Bell', currency = 'money'},
+	-- BARES
+		{ type = Config.Bar, coords = vector3(952.8, 354.67, 15.88),                                 name = '69th Street Diner', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(-52, 583, 12.69),                                      name = 'Drusilla\'s Ristorante Italiano', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(-1171.8, 1924.26, 19.78),                              name = 'Mr Fuk\'s', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(1017.91, 568.53, 18.12),                               name = 'PERESTROIKA', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(86.36, 1820.12, 15.64),                                name = 'SuperStar Cafe', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(-166.89, 889.23, 15.7),                                name = 'SuperStar Cafe', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(-1288.05, 1654.77, 19.63),                             name = 'Gentleman\'s Club', currency = 'money'},
+		{ type = Config.Bar, coords = vector3(-1434.06, 1468.98, 19.56),                             name = 'NOODLE EXCHANGE', currency = 'money'},
+	-- CLUBS
+		{ type = Config.Club, coords = vector3(-414.84, 997.16, 7.56),                               name = 'MAISONETTE 9', currency = 'money'},
+	-- OTRAS TIENDAS
+		{ type = Config.Herramientas, coords = vector3(1897.05, 1357.54, 28.5),                      name = 'Tienda de Herramientas', currency = 'money'},
+		{ type = Config.Tecnologia, coords = vector3(-1508.31, 1303.96, 25.44),                      name = 'tw@ INTERNET CAFE', currency = 'money'},
+		{ type = Config.Tecnologia, coords = vector3(-266.41, 2234.48, 12.91),                       name = 'tw@ INTERNET CAFE', currency = 'money'},
+		{ type = Config.Tecnologia, coords = vector3(1039.55, 666.53, 24.19),                        name = 'tw@ INTERNET CAFE', currency = 'money'},
+		-- ARMAS
+		{ type = Config.Armas, coords = vector3(1135.47, 927.48, 34.25),                             name = 'Tienda de Armas', currency = 'money'}, -- can set currency like so
+		{ type = Config.Armas, coords = vector3(149.47, 498.46, 11.19),                              name = 'Tienda de Armas', currency = 'money'},
+	-- TRABAJOS
+		{ type = Config.Comisaria, job = 'police', coords = vector3(144.52, 2052.85, 10.14),         name = 'Armería'},
+		{ type = Config.Hospital,  job = 'ambulance', coords = vector3(-111.99, 268.97, 4.96),        name = 'Instrumental & Defensa Personal'},
 
-	{ type = Config.Liquor, coords = vector3(1135.808, -982.281, 46.415), name = 'Rob\'s Liquor' },
-	{ type = Config.Liquor, coords = vector3(-1222.915, -906.983,  12.326), name = 'Rob\'s Liquor' },
-	{ type = Config.Liquor, coords = vector3(-1487.553, -379.107,  40.163), name = 'Rob\'s Liquor' },
-	{ type = Config.Liquor, coords = vector3(-2968.243, 390.910, 15.043), name = 'Rob\'s Liquor' },
-	{ type = Config.Liquor, coords = vector3(1166.024, 2708.930, 38.157), name = 'Rob\'s Liquor' },
-	{ type = Config.Liquor, coords = vector3(1392.562, 3604.684, 34.980), name = 'Rob\'s Liquor' },
-	{ type = Config.Liquor, coords = vector3(-1393.409, -606.624, 30.319), name = 'Rob\'s Liquor' },
-
-	{ type = Config.YouTool, coords = vector3(2748.0, 3473.0, 55.67) },
-	{ type = Config.YouTool, coords = vector3(342.99, -1298.26, 32.51) },
-
-	{ coords = vector3(-531.14, -1221.33, 18.48), name = 'Xero Gas'},
-	{ coords = vector3(2557.458,  382.282, 108.622), name = '24/7'},
-	{ coords = vector3(-3038.939, 585.954, 7.908), name = '24/7'},
-	{ coords = vector3(-3241.927, 1001.462, 12.830), name = '24/7'},
-	{ coords = vector3(547.431, 2671.710, 42.156), name = '24/7'},
-	{ coords = vector3(1961.464, 3740.672, 32.343), name = '24/7'},
-	{ coords = vector3(2678.916, 3280.671, 55.241), name = '24/7'},
-	{ coords = vector3(1729.216, 6414.131, 35.037), name = '24/7'},
-	{ coords = vector3(-48.519, -1757.514, 29.421), name = 'LTD'},
-	{ coords = vector3(1163.373, -323.801, 69.205), name = 'LTD'},
-	{ coords = vector3(-707.501, -914.260, 19.215), name = 'LTD'},
-	{ coords = vector3(-1820.523, 792.518, 138.118), name = 'LTD'},
-	{ coords = vector3(1698.388, 4924.404, 42.063), name = 'LTD'},
-	{ coords = vector3(25.723, -1346.966, 29.497), name = '24/7'},
-	{ coords = vector3(373.875, 325.896, 103.566), name = '24/7'},
-	{ coords = vector3(-2544.092, 2316.184, 33.2), name = 'RON'},
-
-	
-	{ type = Config.PoliceArmoury, job = 'police', coords = vector3(487.235, -997.108, 30.69) },
-	{ type = Config.Medicine, job = 'ambulance', coords = vector3(306.3687, -601.5139, 43.28406) },
-
-	{ type = Config.BlackMarketArms, coords = vector3(309.09, -913.75, 56.46), currency = 'black_money' },
-}
+	}
